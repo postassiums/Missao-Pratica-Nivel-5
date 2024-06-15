@@ -20,6 +20,26 @@ with open('alunos.txt','r') as f:
 
 
 
+import matplotlib.pyplot as plt
+
+
+
+lista_de_dados=[]
+for dado in dados:
+  lista_de_dados.append(dado['points'])
+
+
+
+
+plt.hist(lista_de_dados,10,density=True,facecolor='green', alpha=0.75)
+
+
+
+plt.xlabel('Valores')
+plt.ylabel('Probabilidade')
+plt.title('Histograma dos valores')
+plt.grid(True)
+plt.show()
 
 
 
